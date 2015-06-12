@@ -4,7 +4,7 @@
  */
 var product = 'common';
 var namespace = 'pc';
-var layoutpath = namespace + 'pc/common' + product;
+var layoutpath = namespace + '/' + product;
 
 fis.config.set({
 	project: {
@@ -13,16 +13,53 @@ fis.config.set({
     },
     roadmap:{
         path:[
-        	// release编译时，md文件不命中
-        	{
-	            reg: /^\/.*\.(?:md)$/i,
+	        /**
+	         * 匹配layout、widget、page中的模版
+	         * /page/search/search.html =>
+	         * 发布路径 ： /pc/car/page/search/search.html
+	         * id ：    car:page/search/search.html
+	         */
+            {
+                reg : /^\/(page|layout|widget)\/(.+\.html)$/i,
+                isMod : true,
+                release : '/ui/' + layoutpath + '/$1/$2',
+                url : '/' + layoutpath + '/$1/$2',
+                id : '$1/$2'
+            },
+	        /**
+	         * 匹配layout、widget、page中的js、css文件
+	         * /page/index/index.js =>
+	         * 发布路径 ：/static/pc/home/page/index/index.js
+	         * id ：home:page/index/index.js
+	         */
+            {
+                reg : /^\/(page|layout|widget)\/(.*\.(js|css))$/i,
+                isMod : true,
+                release : '/static/' + layoutpath + '/$1/$2',
+                id : '$1/$2'
+            },
+		    /**
+		     * 匹配layout、widget、page中的所有其他静态资源
+		     * /page/pager/images/pager.png =>
+		     * 发布路径 ： /static/pc/home/page/pager/images/pager.png
+	         */
+            {
+                reg : /^\/(page|layout|widget)\/(.*)$/i,
+                release : '/static/' + layoutpath + '/$1/$2'
+            },
+	        /**
+	         * 匹配static下的所有资源
+	         * /static/lib/js/jquery.js =>
+	         * 发布路径 ： /static/pc/common/lib/js/jquery.js
+	         */
+            {
+                reg : /^\/static\/(.*)$/i,
+                release : '/static/' + layoutpath + '/$1'
+            },
+            {
+            	reg: /^\/.*\.(?:md)$/i,
 	            release: false
-	        },
-	        // {
-	        //     reg: /^\/static\/libs\/(.*\.js)$/i,
-	        //     isMod: true,
-	        //     release: '${statics}/${namespace}/libs/$1'
-	        // }
+	        }
         ],
         ext : {
             //less后缀的文件将输出为css后缀
