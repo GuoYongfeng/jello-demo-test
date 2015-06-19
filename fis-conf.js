@@ -10,7 +10,7 @@ fis.config.merge({
   modules : {
     parser : {
         coffee : 'coffee-script',
-        less : ['less', 'css'],
+        less : ['less'],
         md : 'marked'
     }
   },

@@ -4,7 +4,9 @@
     	#widget("/widget/banner/banner.vm")
 
     	<div class="content">
-    		<h3>这是内容区，随便写</h3>
+    		<h3>这是引入的另外一个组件</h3>
+            <hr>
+            #widget("widget/header/header.vm")
     	</div>
         #block("footer")
             #widget("/widget/footer/footer.vm")

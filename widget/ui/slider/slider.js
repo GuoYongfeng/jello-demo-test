@@ -80,7 +80,6 @@ banner.prototype = {
 			}
 			
 		}
-		console.log($("._banner-list"));
 		$("._banner-list").html(html);
 	},
 	initNav : function( start ){

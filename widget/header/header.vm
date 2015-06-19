@@ -1,1 +1,6 @@
-<h1>this is a widget of header</h1>
+<input type="button" id="btn" value="请戳我">
+#script()
+	require(['./header'], function( test ){
+		test();
+	});		
+#end
