@@ -5,7 +5,6 @@
 
     	<div class="content">
     		<h3>这是引入的另外一个组件</h3>
-            <hr>
             #widget("widget/header/header.vm")
     	</div>
         #block("footer")
