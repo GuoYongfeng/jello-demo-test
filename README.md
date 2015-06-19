@@ -2,33 +2,7 @@
 
 ## 目录结构
 
-E:.
-├─bower_components<br>
-├─page <br>
-│  ├─index<br>
-│  │  └─images<br>
-│  └─layout<br>
-│      └─base<br>
-├─static<br>
-│  ├─lib<br>
-│  │  ├─css<br>
-│  │  ├─images<br>
-│  │  └─js<br>
-│  └─ui<br>
-├─test<br>
-│  └─index<br>
-└─widget<br>
-    ├─banner<br>
-    │  └─<br>
-    ├─footer<br>
-    │  └─<br>
-    ├─header<br>
-    ├─sidebar<br>
-    └─ui<br>
-        ├─slider<br>
-        └─util<br>
-            └─class<br>
-
+<img src="./static/lib/images/tree.png" height="542" width="296">
 
 * layout
 	* 通用的模板输出，各个page只需要自定义相关的内容，然后继承layout模板即可
