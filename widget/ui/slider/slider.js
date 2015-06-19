@@ -5,8 +5,6 @@
  * @type {Number}
  */
 
-var $ = require('static/lib/js/zepto.js');
-
 var	index = 0,
 	len = 0,
 	$cur = null,
@@ -82,6 +80,7 @@ banner.prototype = {
 			}
 			
 		}
+		console.log($("._banner-list"));
 		$("._banner-list").html(html);
 	},
 	initNav : function( start ){

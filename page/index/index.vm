@@ -2,6 +2,10 @@
 #extends("../layout/base/base.vm")
     #block("body")
     	#widget("/widget/banner/banner.vm")
+
+    	<div class="content">
+    		<h3>这是内容区，随便写</h3>
+    	</div>
         #block("footer")
             #widget("/widget/footer/footer.vm")
         #end
