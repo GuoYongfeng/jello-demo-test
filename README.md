@@ -2,6 +2,34 @@
 
 ## 目录结构
 
+E:.
+├─bower_components
+├─page
+│  ├─index
+│  │  └─images
+│  └─layout
+│      └─base
+├─static
+│  ├─lib
+│  │  ├─css
+│  │  ├─images
+│  │  └─js
+│  └─ui
+├─test
+│  └─index
+└─widget
+    ├─banner
+    │  └─
+    ├─footer
+    │  └─
+    ├─header
+    ├─sidebar
+    └─ui
+        ├─slider
+        └─util
+            └─class
+            
+
 * layout
 	* 通用的模板输出，各个page只需要自定义相关的内容，然后继承layout模板即可
 	* 这样各个page下的模板不需要去重复的定义html等结构，以及引入的类库等
@@ -22,10 +50,11 @@
 	* 如写好某个插件后，需要模拟接口数据，可在此目录下新增数据文件
 
 * widget
-	* 存放模块化资源
+	* 存放模块化资源 
 	* 这里的模块化分为两个部分
-		* 模板间公用的模块化组件，可直接新建
-		* js和css的模块化资源建议放到widget下的ui目录维护
-
+		* 模板间公用的模块化组件，可直接新建 （业务层）
+		* js和css的模块化资源建议放到widget下的ui目录维护 （控件层）
+	* 另外，ui下的util目录，存放工具类文件，比如底层的事件机制、class类的模拟等（通用工具层）
+git
 
 ## 使用方法
