@@ -17,6 +17,8 @@ fis.config.merge({
       coffee : 'js',
       md : 'html'
     },
-    domain: '/common'
+    path : [
+
+    ]
   }
 });

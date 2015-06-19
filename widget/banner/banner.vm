@@ -1,0 +1,10 @@
+<div class="ui-slide-wrap">
+	<ul class="ul _banner-list"></ul>
+	<div class="ui-slide-nav"></div>
+	<div class="ui-slide-pre"></div>
+	<div class="ui-slide-next"></div>
+</div>
+#script()
+	require(['./banner']);
+#end
+
